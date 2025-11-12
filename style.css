@@ -524,7 +524,6 @@ footer{
 }
 
 .bottom-footer{
-    display: flex;
     justify-content: center;
     gap: 35%;
 }
