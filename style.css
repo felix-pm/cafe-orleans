@@ -570,6 +570,10 @@ footer{
     cursor: pointer;
 }
 
+.first-bottom-footer p:hover{
+    color: #E9BD8C;
+}
+
 .second-bottom-footer h2{
     font-family: 'Inter', sans-serif;
     font-size: 36px;
@@ -584,6 +588,10 @@ footer{
     color: #fff;
     margin-left: -15px;
     cursor: pointer;
+}
+
+.second-bottom-footer p:hover{
+    color: #E9BD8C;
 }
 
 .third-bottom-footer{
