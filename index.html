@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KEITHSTON</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
-    <header>    
+    <header>
         <div class="flex-nav">
             <div class="logo">
                 <a href="#"><img src="./asset/logo.png" alt="Logo" width="60px"></a>
@@ -46,7 +50,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Pain complet</h3>               
+                        <h3>Pain complet</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -61,7 +65,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Pâtisserie <br> feuilletée</h3>               
+                        <h3>Pâtisserie <br> feuilletée</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -76,7 +80,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Baguette de <br> campagne</h3>               
+                        <h3>Baguette de <br> campagne</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -91,7 +95,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Miche de pain <br> blanc</h3>               
+                        <h3>Miche de pain <br> blanc</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -106,7 +110,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Gâteau pâte <br> feuilletée</h3>               
+                        <h3>Gâteau pâte <br> feuilletée</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -121,7 +125,7 @@
                 <div class="panel-flex">
                     <div class="panel1-1">
                         <h2>40€</h2>
-                        <h3>Miche de pain <br> complet</h3>               
+                        <h3>Miche de pain <br> complet</h3>
                     </div>
                     <div class="panel1-2">
                         <img src="./asset/info.png" alt="">²
@@ -163,7 +167,7 @@
             <h4>Lire plus</h4>
         </div>
     </section>
-    <section class="plaisirs"data-aos="fade-down">
+    <section class="plaisirs" data-aos="fade-down">
         <h2>Petits Plaisirs</h2>
         <div class="panel3">
             <div class="photo-panel3">
@@ -249,41 +253,106 @@
             <p>© 2025 Coda Bakery. Tous droits réservés</p>
         </div>
     </footer>
+    <div class="btn-up">
+        <div class="btn-up2">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
 
-<script>
-  AOS.init();
-</script>
+    <script>
+        AOS.init();
+    </script>
 
-<script>
-  const burger = document.querySelector('.menu-burger i');
-  const nav = document.querySelector('.nav');
-  let isOpen = false;
+    <script>
+        const burger = document.querySelector('.menu-burger i');
+        const nav = document.querySelector('.nav');
+        let isOpen = false;
 
-  function toggleMenu() {
-    if (window.innerWidth < 768) {
-      isOpen = !isOpen;
-      nav.classList.toggle('active', isOpen);
-      if (isOpen) {
-        burger.classList.remove('fa-bars');
-        burger.classList.add('fa-xmark');
-      } else {
-        burger.classList.remove('fa-xmark');
-        burger.classList.add('fa-bars');
-      }
-    }
-  }
-  document.querySelector('.menu-burger').addEventListener('click', toggleMenu);
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
-      nav.classList.remove('active');
-      burger.classList.remove('fa-xmark');
-      burger.classList.add('fa-bars');
-      isOpen = false;
-    }
-  });
-</script>
+        function toggleMenu() {
+            if (window.innerWidth < 768) {
+                isOpen = !isOpen;
+                nav.classList.toggle('active', isOpen);
+                if (isOpen) {
+                    burger.classList.remove('fa-bars');
+                    burger.classList.add('fa-xmark');
+                } else {
+                    burger.classList.remove('fa-xmark');
+                    burger.classList.add('fa-bars');
+                }
+            }
+        }
+        document.querySelector('.menu-burger').addEventListener('click', toggleMenu);
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                nav.classList.remove('active');
+                burger.classList.remove('fa-xmark');
+                burger.classList.add('fa-bars');
+                isOpen = false;
+            }
+        });
+    </script>
+    <script>
+        const btn = document.querySelector('.btn-up')
+
+        btn.addEventListener('click', () => {
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addButtons = document.querySelectorAll('.panel1-2 h4');
+            const cartIcon = document.querySelector('#cart-link i');
+
+            addButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productPanel = e.target.closest('.panel1');
+                    const productImg = productPanel.querySelector('.panel1-img img');
+
+                    if (!productImg) return;
+
+                    const flyingImg = productImg.cloneNode(true);
+                    flyingImg.style.position = 'absolute';
+                    flyingImg.style.zIndex = 1000;
+                    flyingImg.style.pointerEvents = 'none';
+
+                    const rect = productImg.getBoundingClientRect();
+                    flyingImg.style.left = rect.left + 'px';
+                    flyingImg.style.top = rect.top + 'px';
+                    flyingImg.style.width = rect.width + 'px';
+                    flyingImg.style.height = rect.height + 'px';
+                    flyingImg.style.transition = 'all 1s ease-in-out';
+
+                    document.body.appendChild(flyingImg);
+
+                    const cartRect = cartIcon.getBoundingClientRect();
+
+                    setTimeout(() => {
+                        flyingImg.style.left = cartRect.left + 'px';
+                        flyingImg.style.top = cartRect.top + 'px';
+                        flyingImg.style.width = '30px';
+                        flyingImg.style.height = '30px';
+                        flyingImg.style.opacity = 0.5;
+                    }, 10);
+
+                    flyingImg.addEventListener('transitionend', () => {
+                        flyingImg.remove();
+                    });
+                });
+            });
+        });
+
+    </script>
 
 
-    
+
+
+
 </body>
+
 </html>
