@@ -303,56 +303,6 @@
             })
         })
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const addButtons = document.querySelectorAll('.panel1-2 h4');
-            const cartIcon = document.querySelector('#cart-link i');
-
-            addButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const productPanel = e.target.closest('.panel1');
-                    const productImg = productPanel.querySelector('.panel1-img img');
-
-                    if (!productImg) return;
-
-                    const flyingImg = productImg.cloneNode(true);
-                    flyingImg.style.position = 'absolute';
-                    flyingImg.style.zIndex = 1000;
-                    flyingImg.style.pointerEvents = 'none';
-
-                    const rect = productImg.getBoundingClientRect();
-                    flyingImg.style.left = rect.left + 'px';
-                    flyingImg.style.top = rect.top + 'px';
-                    flyingImg.style.width = rect.width + 'px';
-                    flyingImg.style.height = rect.height + 'px';
-                    flyingImg.style.transition = 'all 1s ease-in-out';
-
-                    document.body.appendChild(flyingImg);
-
-                    const cartRect = cartIcon.getBoundingClientRect();
-
-                    setTimeout(() => {
-                        flyingImg.style.left = cartRect.left + 'px';
-                        flyingImg.style.top = cartRect.top + 'px';
-                        flyingImg.style.width = '30px';
-                        flyingImg.style.height = '30px';
-                        flyingImg.style.opacity = 0.5;
-                    }, 10);
-
-                    flyingImg.addEventListener('transitionend', () => {
-                        flyingImg.remove();
-                    });
-                });
-            });
-        });
-
-    </script>
-
-
-
-
-
 </body>
 
 </html>
