@@ -42,10 +42,12 @@ header {
   text-align: center;
   padding: 15px 0;
   z-index: 999;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav.active {
   display: flex;
+  opacity: 1;
 }
 
 .nav a {
@@ -79,12 +81,22 @@ header {
     height: 40px;
 }
 
-.menu-burger img{
-    top: 18px;
-    right: 17px;
-    width: 20px;
-    height: 15px;
+.menu-burger {
+  cursor: pointer;
+  z-index: 1001;
 }
+
+.menu-burger i {
+  font-size: 26px;
+  color: #000000; 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-burger i.fa-xmark {
+  transform: rotate(180deg);
+  color: #000000; 
+}
+
 
 
 .intro {

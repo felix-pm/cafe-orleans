@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>    
@@ -16,7 +17,7 @@
                 <a href="#"><img src="./asset/logo.png" alt="Logo" width="60px"></a>
             </div>
             <div class="menu-burger">
-                <img src="./asset/menu-burger.png" alt="Menu Burger">
+                <i class="fa-solid fa-bars"></i>
             </div>
             <nav class="nav">
                 <a href="#">Accueil</a>
@@ -250,13 +251,32 @@
 
 
 <script>
-  const burger = document.querySelector('.menu-burger');
+  const burger = document.querySelector('.menu-burger i');
   const nav = document.querySelector('.nav');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+  let isOpen = false;
+  function toggleMenu() {
+    if (window.innerWidth < 768) {
+      isOpen = !isOpen;
+      nav.classList.toggle('active', isOpen);
+      if (isOpen) {
+        burger.classList.remove('fa-bars');
+        burger.classList.add('fa-xmark');
+      } else {
+        burger.classList.remove('fa-xmark');
+        burger.classList.add('fa-bars');
+      }
+    }
+  }
+  document.querySelector('.menu-burger').addEventListener('click', toggleMenu);
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      nav.classList.remove('active');
+      burger.classList.remove('fa-xmark');
+      burger.classList.add('fa-bars');
+      isOpen = false;
+    }
   });
 </script>
-    
+
 </body>
 </html>
