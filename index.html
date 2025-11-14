@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEITHSTON</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./asset/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>KEITHSTON</title> <!-- titre de la page dans le navigateur -->
+    <link rel="stylesheet" href="style.css"> <!-- relier le css -->
+    <link rel="shortcut icon" href="./asset/logo.png"> <!-- icon dans la barre de recherche dans le navigateur -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- police Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- police Sansita+Swashed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- police Inter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Lien pour lier fontaweome -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- liens pour relier le site avec les animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- liens pour relier le site avec les animations -->
 </head>
 
 <body>
+    <!-- header avec ma nav -->
     <header>
         <div class="flex-nav">
             <div class="logo">
@@ -34,6 +33,7 @@
             </nav>
         </div>
     </header>
+    <!-- intro avec les premiers textes et le background -->
     <section class="intro">
         <div class="size-intro">
             <h2>Café Délicieux</h2>
@@ -41,6 +41,7 @@
             <h4>Commander</h4>
         </div>
     </section>
+    <!-- premier panel de produit -->
     <section class="top-produits" data-aos="fade-down">
         <h2>Nos Tops Produits</h2>
         <div class="top-produits-container">
@@ -136,6 +137,7 @@
             </div>
         </div>
     </section>
+    <!-- section avec les réductions -->
     <section class="reduction">
         <div>
             <h2>20% de Réduction sur la prémière commande</h2>
@@ -143,6 +145,7 @@
             <h4>En savoir plus</h4>
         </div>
     </section>
+    <!-- scroll bar horizontal et deuxième panel de photos -->
     <section class="decouvrir" data-aos="fade-left">
         <h2>Découvrir</h2>
         <div class="gateaux">
@@ -161,6 +164,7 @@
             <img src="./asset/panel2/photo6-panel2.png" alt="Photo gateau">
         </div>
     </section>
+    <!-- section pour en savoir plus sur le café -->
     <section class="a-propos">
         <div>
             <h2>A propos</h2>
@@ -168,6 +172,7 @@
             <h4>Lire plus</h4>
         </div>
     </section>
+    <!-- troisième panel de photos pour les petits plaisirs -->
     <section class="plaisirs" data-aos="fade-right">
         <h2>Petits Plaisirs</h2>
         <div class="panel3">
@@ -194,6 +199,7 @@
             </div>
         </div>
     </section>
+    <!-- footer avec les différents réseaux sociaux, les informations sur le café et les différentes pages de la page (ici factice) -->
     <footer>
         <div class="top-footer">
             <div class="img-logo-footer">
@@ -259,10 +265,11 @@
             <i class="fa-solid fa-arrow-up"></i>
         </div>
     </div>
-
+    <!-- script pour les animations au lancement de la page -->
     <script>
         AOS.init();
     </script>
+    <!-- script pour le menu burger utilisant 'active' une fois que le clic à lieu ce qui utilise le css avec 'active' -->
     <script>
         const burger = document.querySelector('.menu-burger i');
         const nav = document.querySelector('.nav');
@@ -291,6 +298,7 @@
             }
         });
     </script>
+    <!-- bouton en bas à droite qui permet de remonter en haut de la page une fois cliqué -->
     <script>
         const btn = document.querySelector('.btn-up')
 
